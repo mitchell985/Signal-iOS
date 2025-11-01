@@ -7,25 +7,18 @@ This document outlines the comprehensive implementation plan for adding CarPlay 
 
 ## Phase 1: Project Setup & Configuration
 
-### 1.1 Xcode Project Configuration
-- [ ] Add CarPlay framework to Signal target dependencies
+### 1.1 Xcode Project Configuration, create a generated folder for the bad ai implemenation?
+- [x] Add CarPlay framework to Signal target dependencies
 - [ ] Configure Info.plist to declare CarPlay support
   - [ ] Add `CPApplicationDisplayName` key with app display name
   - [ ] Add `CPRootTemplate` array if needed for custom templates
-- [ ] Add CarPlay capability to project (optional for local development)
-- [ ] Verify project builds with CarPlay framework imported
+- [x] Add CarPlay capability to project (optional for local development)
+- [x] Verify project builds with CarPlay framework imported
 
-### 1.2 Entitlements Configuration
-- [ ] Note: Running without official CarPlay entitlement means:
-  - [ ] CarPlay UI will only work in CarPlay Simulator
-  - [ ] Physical CarPlay devices may not recognize the app
-  - [ ] Document this limitation for development team
-- [ ] Keep `Signal.entitlements` and `Signal-AppStore.entitlements` unchanged (no CarPlay entitlement)
-
-### 1.3 Framework Imports
-- [ ] Create `Signal/CarPlay/` directory structure
-- [ ] Import `CarPlay` framework in necessary files
-- [ ] Create `CarPlayManager.swift` as main coordinator class
+### 1.2 Framework Imports
+- [x] Create `Signal/CarPlay/` directory structure
+- [x] Import `CarPlay` framework in necessary files
+- [x] Create `CarPlayManager.swift` as main coordinator class
 
 ---
 
@@ -96,7 +89,7 @@ This document outlines the comprehensive implementation plan for adding CarPlay 
 
 ---
 
-## Phase 4: Message List UI
+## Phase 4: Message List UI, needed for carplay?
 
 ### 4.1 Message List Template
 - [ ] Create `CPListTemplate` for messages in a conversation
@@ -174,7 +167,7 @@ This document outlines the comprehensive implementation plan for adding CarPlay 
 
 ## Phase 6: Message Composition & Sending
 
-### 6.1 Voice Message Recording
+### 6.1 Voice Message Recording, needed for carplay?
 - [ ] Create `CPVoiceMessageTemplate` or use `CPAlertTemplate`
 - [ ] Integrate with existing `VoiceMessageInProgressDraft`
   - [ ] Reuse recording logic from `VoiceMessageInProgressDraft`
